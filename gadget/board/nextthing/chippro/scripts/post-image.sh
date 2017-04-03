@@ -50,4 +50,5 @@ cat <<-EOF > ${1}/uboot.script.source
 	boot
 EOF
 
-mkimage -A arm -T script -C none -n "Flash CHIP Pro" -d "${1}/uboot.script.source" "${1}/uboot.script"
+mkimage -A arm -T script -C none -n "Flash CHIP Pro" -d "${1}/uboot.script.source" "/uboot.script"
+mv /uboot.script "${1}/uboot.script"
